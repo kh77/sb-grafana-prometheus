@@ -1,0 +1,28 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+        #- prometheus
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Spring Boot Actuator Info Application
+    description: Spring Boot application that explores the /info endpoint
+    version: 1.0.0
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    properties:
+      java:
+        version: @java.version@
+
+#  http://localhost:8080/actuator/info
